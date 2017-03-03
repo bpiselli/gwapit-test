@@ -2,10 +2,10 @@ version: '2'
 
 services:
   db:
-    container_name: gwapit_test_db
+    container_name: gwapit-test-db
     image: postgres
   core:
-    container_name: gwapit_test_core
+    container_name: gwapit-test-core
     build: ./core
     command: bash -c "./manage.py migrate; while :; do ./manage.py runserver 0.0.0.0:9081; sleep 1; done"
     volumes:
@@ -15,7 +15,7 @@ services:
     depends_on:
       - db
   web:
-    container_name: gwapit_test_web
+    container_name: gwapit-test-web
     build: ./web
     command: serve --host 0.0.0.0 --port 9080
     volumes:

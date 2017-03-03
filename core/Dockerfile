@@ -11,5 +11,5 @@ RUN pip install -r requirements.txt
 ADD . /opt/gwapit
 RUN python manage.py migrate
 
-ENTRYPOINT ["python","manage.py"]
-CMD ["migrate"]
+#ENTRYPOINT ["python","manage.py"]
+CMD ["python","manage.py","migrate"]
