@@ -12,8 +12,6 @@ services:
       - ./core:/opt/gwapit
     ports:
       - "9081:9081"
-    depends_on:
-      - db
   web:
     container_name: gwapit-test-web
     build: ./web
