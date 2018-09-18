@@ -64,3 +64,10 @@ ZOMBIES
 
 Share screen with :
 https://meet.jit.si
+
+Access API
+http://test.hr.gwapit.in:9081/api/
+
+Start project
+* `docker-compose up -d core` for python project
+* `docker-compose up -d web` for angular project
