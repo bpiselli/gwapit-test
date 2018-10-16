@@ -12,11 +12,3 @@ services:
       - ./core:/opt/gwapit
     ports:
       - "9081:9081"
-  web:
-    container_name: gwapit-test-web
-    build: ./web
-    command: serve --host 0.0.0.0 --port 9080
-    volumes:
-      - ./web:/opt/gwapit
-    ports:
-      - "9080:9080"
