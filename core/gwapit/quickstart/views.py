@@ -3,7 +3,7 @@ from rest_framework import viewsets
 from rest_framework.decorators import detail_route, list_route
 from rest_framework.response import Response
 
-from .fights import cat_fight, zombie_fight
+from .fights import attack_strongest
 from .models import Cat, Zombie
 from .serializers import CatSerializer, ZombieSerializer
 
