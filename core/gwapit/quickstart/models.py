@@ -15,7 +15,7 @@ class BaseCharacter(models.Model):
     alive = models.BooleanField(default=True)
 
 class Cat(BaseCharacter):
-    cuteness_level = models.PositiveSmallIntegerField()
+    cuteness_level = models.PositiveSmallIntegerField(default=10)
 
 class Zombie(BaseCharacter):
-    rot_level = models.PositiveSmallIntegerField()
+    rot_level = models.PositiveSmallIntegerField(default=10)
