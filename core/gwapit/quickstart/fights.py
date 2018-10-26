@@ -7,6 +7,8 @@ def attack_strongest(queryset):
     else:
         defender_queryset = Zombie.objects
 
+    defenders_states = {}
+
     for attacker in attacker_queryset:
         target = defender_queryset.objects.order_by('-attack').first()
         damages = attacker.attack - target.defense
@@ -15,3 +17,5 @@ def attack_strongest(queryset):
         else:
             target.life = 0
         target.save()
+        defenders_states[target.name] = target.life
+    return defenders_states

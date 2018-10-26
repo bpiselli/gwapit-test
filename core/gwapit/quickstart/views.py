@@ -11,10 +11,10 @@ from .serializers import CatSerializer, ZombieSerializer
 class FighterViewSetMixin(object):
 
     @list_route(methods=['post'])
-    def test(self, request):
+    def attack(self, request):
         method = self.fight_method
-        method()
-        return Response({'done': 'done'})
+        enemies_states = method()
+        return Response(enemies_states)
 
 
 class CatViewSet(FighterViewSetMixin, viewsets.ModelViewSet):
