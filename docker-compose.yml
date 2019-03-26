@@ -12,3 +12,11 @@ services:
       - ./core:/opt/gwapit
     ports:
       - "9081:9081"
+  desktop:
+    container_name: gwapit-test-desktop
+    build: ./desktop
+    command: "ng serve"
+    volumes:
+      - ./desktop:/opt/gwapit
+    ports:
+      - "4200:4200"
